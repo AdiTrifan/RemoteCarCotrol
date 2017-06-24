@@ -1,0 +1,11 @@
+extends layout
+
+block head
+	link(rel='stylesheet', href='/stylesheets/speech_controller.css')
+block content
+	.container#text_box
+		h1#text Please allow access to your microphone. 
+	.container#speech
+			button(unselectable='on')#stop Stop the car! 
+	script(src='./min_javascripts/libs/speech.js')
+	script(src='./min_javascripts/speech_controller.js')

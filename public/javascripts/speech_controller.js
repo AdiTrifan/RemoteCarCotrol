@@ -13,7 +13,7 @@ $(document).ready(function() {
     }
     $('#stop').bind('touchstart', function() {
         $(this).css({
-            'background-color': '#af1e01'
+            'background-color': 'red'
         });
         move.data = "true";
         move.val = "stop";
@@ -32,13 +32,13 @@ $(document).ready(function() {
         autoRestart: true
     });
     speech.on('start', function() {
-        text.innerHTML = 'Please, talk to me! \n I am listening...';
+        text.innerHTML = 'Please, say your command';
     }).on('end', function() {
         text.innerHTML = 'Stopped listening.';
     }).on('interimResult', function(msg) {
-        text.innerHTML = "Your command is: " + msg;
+        text.innerHTML = msg;
     }).on('finalResult', function(msg) {
-        text.innerHTML = "Your command is: " + msg;
+        text.innerHTML = msg;
         move.val = msg;
         move.data = "true";
         send(move);

@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 		nosql.insert();
 		nosql.read_last();
     res.render('index', {
-        title: 'Remote Diagnostics'
+        title: 'Wireless Car Control'
     });
 
 });
